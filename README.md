@@ -54,9 +54,9 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 71.201.222.245   
-| Web-1      No                    10.1.0.4 ssh 22                     |
-| Web-2      No                  | 10.1.0.4 ssh 22                     |
-  ELKserver  No                    My public IP using TCP 5601
+| Web-1    |  No                 |  10.1.0.4 ssh 22     |
+| Web-2    |  No                 | 10.1.0.4 ssh 22      |
+| ELKserver| No                  |  My public IP using TCP 5601
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
