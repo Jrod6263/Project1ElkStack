@@ -6,7 +6,7 @@ https://drive.google.com/file/d/19QP-L1d3P_AJ0RVjJHLDo9Yet7WLH0A2/view?usp=shari
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: /etc/ansible/filebeat-playbook.yml
+ /etc/ansible/filebeat-playbook.yml
 /etc/ansible/metricbeat-playbook.yml
 
 This document contains the following details:
@@ -26,8 +26,10 @@ Load balancing ensures that the application will be highly Functional, in additi
  What aspect of security do load balancers protect? What is the advantage of a jump box?_
 - Load balancers reroute live traffic incase of DDos attack or other availability issues. Jump box allows us to protect our azure VMs and also allows us to monitor and log in our boxes.
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Network and system logs
-- _TODO: What does Filebeat watch for? Monitoring log files and locations and fowards to elasticsearch.
-- _TODO: What does Metricbeat record? Fowards metrics and statistics to elasticsearch
+What does Filebeat watch for?
+Monitoring log files and locations and fowards to elasticsearch.
+What does Metricbeat record?
+Fowards metrics and statistics to elasticsearch
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -35,9 +37,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.5   | Linux            |
-| Web-1    |Ubuntuserver10.0.0.9     Linux                       
-| Web-2    |Ubuntuserver10.0.0.7     Linux             
-| ELKstack |Ubuntuserver10.1.0.4     Linux                               
+| Web-1    |Ubuntuserver | 10.0.0.9 | Linux                       
+| Web-2    |Ubuntuserver | 10.0.0.7 | Linux             
+| ELKstack |Ubuntuserver | 10.1.0.4 | Linux                               
 
 ### Access Policies
 
@@ -112,18 +114,18 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+(Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+List the IP addresses of the machines you are monitoring_
 -Web-1: 10.0.0.9 and Web-2:10.0.0.7
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+Specify which Beats you successfully installed_
 -https://www.icloud.com/iclouddrive/0a0seTAtIrWYntT6Ii0hqojjA#Screen_Shot_2022-02-24_at_8.05.17_PM
 -https://www.icloud.com/iclouddrive/0c1S4GH_wbonhMjZHJN3N-q7A#Screen_Shot_2022-02-24_at_9.58.16_PM
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+ In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Filebeat is used to collect log files from specific systems or files like Microsoft azure, webservers, MySQL databases, and Apache.
 -Metricbeat is used to monitor stats such as CPU, memory stats, network stats, and VM stats.
 ### Using the Playbook
@@ -134,7 +136,7 @@ SSH into the control node and follow the steps below:
 - Update the config file to include hosts and ports
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+ Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it? For ansible: install-elk.yml 
 For filebeat: filebeat-playbook.yml
 for Metricbeat: metricbeat-playbook.yml
